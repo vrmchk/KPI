@@ -20,10 +20,11 @@ header {
     position: relative;
     display: flex;
     justify-content: space-between;
-    background-color: #17191e;
+    /*background-color: #17191e;*/
+    background-color: #162d64;
 }
 
-.first {
+.glory {
     font-size: 20px;
     margin-left: 10px;
     margin-right: auto;
@@ -74,7 +75,7 @@ main {
     padding-right: 20px;
 }
 
-.sidebar {
+.left-sidebar {
     grid-row: 1/3;
     background: #1e1e31;
     display: flex;
@@ -84,7 +85,7 @@ main {
     font-size: 21px;
 }
 
-.sidebar > ol {
+.left-sidebar > ol {
     list-style-position: outside;
     display: inline-block;
     text-align: left;
@@ -102,15 +103,17 @@ main {
 }
 
 .main-content {
-    background-color: #333e4d;
+    /*background-color: #162d64;*/
+    background-color: #17191e;
     grid-column: 2;
     grid-row: 2;
     padding: 10px 25px;
     text-align: left;
 }
 
-.google-map {
-    background-color: wheat;
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
     grid-column: 3;
     grid-row: 2/4;
 }
@@ -123,10 +126,10 @@ iframe {
 footer {
     margin-top: auto;
     min-height: 100px;
-    background-color: #17191e;
+    /*background-color: #17191e;*/
+    background-color: #162d64;
     display: flex;
     justify-content: space-between;
-    padding: 15px 20px;
 }
 
 footer > * {
