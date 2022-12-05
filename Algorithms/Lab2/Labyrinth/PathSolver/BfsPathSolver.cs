@@ -1,6 +1,5 @@
 ﻿using Labyrinth.Common;
 using Labyrinth.Model;
-using Labyrinth.Utils;
 
 namespace Labyrinth.PathSolver;
 internal class BfsPathSolver : IPathSolver
@@ -37,10 +36,10 @@ internal class BfsPathSolver : IPathSolver
             if (current.Distance == 1)
                 return new SearchResult(current, _iteration, queue.Count + current.Generation);
 
-            foreach (var child in current.GetNeighbors())
+            foreach (var neighbor in current.GetNeighbors())
             {
-                if (!visited.Contains(child))
-                    queue.Enqueue(child);
+                if (!visited.Contains(neighbor))
+                    queue.Enqueue(neighbor);
             }
         }
         

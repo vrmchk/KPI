@@ -1,6 +1,6 @@
 ﻿using Labyrinth.Enums;
 
-namespace Labyrinth.Utils;
+namespace Labyrinth.Common;
 internal struct CompressedCell
 {
     public CompressedCell((int, int) coordinate, CellType type)

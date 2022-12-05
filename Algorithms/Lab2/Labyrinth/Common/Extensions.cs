@@ -1,7 +1,6 @@
 ﻿using System.Text;
 using Labyrinth.Enums;
 using Labyrinth.Model;
-using Labyrinth.Utils;
 
 namespace Labyrinth.Common;
 internal static class Extensions

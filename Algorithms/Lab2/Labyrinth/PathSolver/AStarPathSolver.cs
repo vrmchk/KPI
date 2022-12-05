@@ -1,6 +1,5 @@
 ﻿using Labyrinth.Common;
 using Labyrinth.Model;
-using Labyrinth.Utils;
 
 namespace Labyrinth.PathSolver;
 
@@ -32,13 +31,13 @@ internal class AStarPathSolver : IPathSolver
             if (current.Distance == 1)
                 return new SearchResult(current, _iteration, open.Count + closed.Count);
             
-            foreach (var child in current.GetNeighbors())
+            foreach (var neighbor in current.GetNeighbors())
             {
-                if (closed.Contains(child))
+                if (closed.Contains(neighbor))
                     continue;
                 
-                if (!open.Contains(child))
-                    open.Add(child);
+                if (!open.Contains(neighbor))
+                    open.Add(neighbor);
             }
         }
 

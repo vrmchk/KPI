@@ -2,7 +2,6 @@
 using Labyrinth.Common;
 using Labyrinth.Model;
 using Labyrinth.PathSolver;
-using Labyrinth.Utils;
 
 namespace Labyrinth;
 
