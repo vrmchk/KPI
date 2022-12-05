@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labyrinth", "Labyrinth\Labyrinth.csproj", "{2763D4D2-EA37-49C3-91F0-2B375CB20D10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabyrinthMaker", "LabyrinthMaker\LabyrinthMaker.csproj", "{663A732A-5FD7-4FFD-BBCB-049AEE825530}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2763D4D2-EA37-49C3-91F0-2B375CB20D10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2763D4D2-EA37-49C3-91F0-2B375CB20D10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2763D4D2-EA37-49C3-91F0-2B375CB20D10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2763D4D2-EA37-49C3-91F0-2B375CB20D10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{663A732A-5FD7-4FFD-BBCB-049AEE825530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{663A732A-5FD7-4FFD-BBCB-049AEE825530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{663A732A-5FD7-4FFD-BBCB-049AEE825530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{663A732A-5FD7-4FFD-BBCB-049AEE825530}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
