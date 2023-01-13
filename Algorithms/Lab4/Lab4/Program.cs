@@ -13,7 +13,7 @@ internal static class Program
 
         ABC abc = new ABC(graph, numBees, numOnlookers, numScouts, lowerBound, upperBound);
 
-        int[] bestSolution = abc.Solve();
+        int[] bestSolution = abc.Solve(printIterations: true);
         int colors = bestSolution.Distinct().Count();
         Console.WriteLine(IsCorrect(graph, bestSolution)
             ? string.Join(", ", bestSolution)
@@ -31,7 +31,7 @@ internal static class Program
             List<int> neighbors = new List<int>();
             for (int j = 0; j < numVertices; j++)
             {
-                if (i != j && rand.NextDouble() < 0.5)
+                if (i != j && rand.NextDouble() < 0.2)
                     neighbors.Add(j);
             }
 
