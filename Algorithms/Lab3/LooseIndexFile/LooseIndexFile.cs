@@ -32,8 +32,8 @@ public class LooseIndexFile<T>
     {
         int key = GetKey();
 
-        if (GetBlocksCount() >= _configuration.BlockSize && BlockIsFilled(ComputeBlockId(key)))
-            RebuildFiles();
+        // if (GetBlocksCount() >= _configuration.BlockSize && BlockIsFilled(ComputeBlockId(key)))
+        //     RebuildFiles();
 
         var indexFileEntry = new IndexFileEntry { Key = key, BlockId = GetBlockId(key) };
         var fileEntry = new FileEntry<T> { Key = key, Value = value };
@@ -41,7 +41,7 @@ public class LooseIndexFile<T>
         AddToMainFile(_configuration.MainFileLocation, fileEntry);
         return fileEntry;
     }
-
+ 
     public FileEntry<T> Update(int key, T value)
     {
         return Update(new FileEntry<T> { Key = key, Value = value });
@@ -88,8 +88,16 @@ public class LooseIndexFile<T>
     private int GetKey()
     {
         if (!File.Exists(_configuration.AutoincrementFileLocation))
-            new Autoincrement { LastKey = 0, LastBlockId = 0, BlocksCount = 0 }.SaveToFile(_configuration
-                .AutoincrementFileLocation);
+        {
+            new Autoincrement
+                {
+                    LastKey = 0,
+                    LastBlockId = 0,
+                    BlockSize = _configuration.BlockSize,
+                    BlocksCount = 0
+                }
+                .SaveToFile(_configuration.AutoincrementFileLocation);
+        }
 
         var autoincrement = Autoincrement.ReadFromFile(_configuration.AutoincrementFileLocation);
 
@@ -137,7 +145,7 @@ public class LooseIndexFile<T>
     }
 
     #endregion
-    
+
     #region FileRebuild
 
     private void RebuildFiles()

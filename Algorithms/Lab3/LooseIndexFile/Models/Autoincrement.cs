@@ -6,6 +6,7 @@ public class Autoincrement
 {
     public required int LastKey { get; set; }
     public required int LastBlockId { get; set; }
+    public required int BlockSize { get; set; }
     public required int BlocksCount { get; set; }
 
     public static Autoincrement ReadFromFile(string path)
